@@ -10,12 +10,12 @@
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.6);
     z-index: 100;
   }
   .header::before {
@@ -37,11 +37,14 @@
     left: 100%;
   }
   .logo {
-    color: #fff;
+    /* color: #fff;
     font-size: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 600; */
     cursor: default;
+  }
+  .img-logo{
+    width: 200px;
   }
   .navbar a {
     color: #0077ff;
@@ -52,6 +55,7 @@
   }
   .navbar a:hover {
     color: #f00;
+    font-weight: bold;
   }
   #menu-icon {
     font-size: 36px;

@@ -10,6 +10,8 @@ import { CardProductoComponent } from './component/card-producto/card-producto.c
 import { ProductoComponent } from './component/producto/producto.component';
 import { FiltroProductoPipe } from './pipes/filtro-producto.pipe';
 import { SafePipe } from './pipes/safe.pipe';
+import { FiltroLimitPipe } from './pipes/filtro-limit.pipe';
+import { ProductosComponent } from './component/productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SafePipe } from './pipes/safe.pipe';
     CardProductoComponent,
     ProductoComponent,
     FiltroProductoPipe,
-    SafePipe
+    SafePipe,
+    FiltroLimitPipe,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,

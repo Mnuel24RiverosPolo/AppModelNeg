@@ -9,5 +9,5 @@
     --clr-translucent: rgba(0, 0, 0, 0.6);
 }
 body{
-    background: var(--clr-black);
+    background: var(--clr-white);
 }   

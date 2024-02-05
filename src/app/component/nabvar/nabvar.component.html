@@ -1,11 +1,11 @@
 <!-- nombre-del-componente.component.html -->
 <header class="header" [ngClass]="{'scrolled': isScrolled}">
-  <a href="#" class="logo">Logo</a>
+  <a href="/home" class="logo"><img class="img-logo" src="{{logo}}" alt=""></a>
   <i class='bx bx-menu' id="menu-icon" (click)="toggleMenu()"></i>
-  <nav class="navbar" [ngClass]="{'active': isMenuActive}">
-      <a href="/home">Inicio</a>
-      <a href="#">Productos</a>
-      <a href="/producto/1">Contactar</a>
+  <nav class="navbar" [ngClass]="{'active': isMenuActive}" >
+    <ng-container *ngFor="let item of items">
+      <a href="{{item.ruta}}">{{item.name}}</a>
+    </ng-container>
   </nav>
 </header>
 <div class="nav-bg" [ngClass]="{'active': isMenuActive, 'scrolled': isScrolled}" (click)="toggleMenu()"></div>

@@ -10,18 +10,12 @@
               <ng-template #image2>
                 <img class="producto-imagen" src="{{product.image[1]}}" alt="${product.name}">
               </ng-template>  
-              <!-- <img class="producto-imagen" src="{{product.image[0]}}" alt="${product.name}">
-                <div class="image-details" *ngIf="hoveredProduct === 'product'">
-                  <img class="producto-imagen" src="{{product.image[1]}}" alt="${product.name}">
-                </div> -->
             </div>
         </div>
         <div class="producto-detalles">
             <h3 class="producto-titulo">{{product.name}}</h3>
             <p class="producto-precio">{{product.price | currency: "PEN"}}</p>
-            <button class='buton buton-yesil'>
-              <span><i class="fa"></i> .buton-yesil</span>
-            </button>
+              <a (click)="contactar(product.name)" class="button"><i class="fa-brands fa-whatsapp whatsapp"></i>    Contactar</a>
             
         </div>
     </div>

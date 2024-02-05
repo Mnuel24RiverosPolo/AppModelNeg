@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CategoriasService } from 'src/app/services/categorias.service';
 import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
@@ -9,21 +10,24 @@ import { ProductosService } from 'src/app/services/productos.service';
 export class HomeComponent {
   products: any = [];
   search: string = ''
+  categorias: any = [];
+  categoriaSeleccionada: string = '';
+  filtroActivo: boolean = false
   constructor(
     private productsService: ProductosService,
+    private categoriasService: CategoriasService
   ) { }
   ngOnInit(): void {
     this.products = this.productsService.getProductos()
-    // .subscribe(
-    //     res => {
-    //       this.products = res;
-    //       console.log(this.products)
-    //     },
-    //     err => console.log(err)
-    //   )
+    this.categorias = this.categoriasService.getCategorias()
   }
 
   onSearchProduct(search: string) {
     this.search = search
+  }
+  filtrarPeliculas(categoria: string) {
+    this.categoriaSeleccionada = categoria;
+    this.filtroActivo = true
+    console.log(this.categoriaSeleccionada)
   }
 }

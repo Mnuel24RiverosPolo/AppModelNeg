@@ -15,7 +15,7 @@ export class CardProductoComponent {
   hoveredProduct: any | null = null;
 
   contactar(nombre: string){
-    console.log("redirecting to")
+    console.log("redirecting to", nombre);
   }
   showDetail() {
     this.hoveredProduct = 'product';
