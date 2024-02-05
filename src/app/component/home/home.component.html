@@ -5,9 +5,9 @@
         <!-- <a class="btn" *ngIf="this.authService.getToken()" routerLink="/new"><i class="fa-sharp fa-solid fa-plus"></i></a> -->
     </div>
     <div class="row">
-        <div *ngFor="let product of products | filtroProducto:search" class="card col-md-4 mx-auto mt-2 mb-2"
-            style="width: 16rem;">
-            <app-card-producto [product]="product"></app-card-producto>
+        <div *ngFor="let product of products | filtroProducto:search" class=" col-md-4 mx-auto mt-2 mb-2"
+            style="width: 18rem;">
+            <app-card-producto [product]="product" ></app-card-producto>
         </div>
     </div>
 </div>

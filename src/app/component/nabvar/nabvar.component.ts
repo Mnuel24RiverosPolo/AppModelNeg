@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-nabvar',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./nabvar.component.css']
 })
 export class NabvarComponent {
+  isMenuActive: boolean = false;
+  isScrolled: boolean = false;
 
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 0;
+  }
+
+  toggleMenu() {
+    this.isMenuActive = !this.isMenuActive;
+  }
 }
