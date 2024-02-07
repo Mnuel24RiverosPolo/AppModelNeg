@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --clr-main: #ebff39;
+    --clr-main-light: #da7b00;
+    --clr-white: #ffffff;
+    --clr-gray: #858585;
+    --clr-red: #f80000;
+    --clr-black: rgb(0, 0, 0);
+    --clr-translucent: rgba(0, 0, 0, 0.6);
+}
+body{
+    background: var(--clr-white);
+}   

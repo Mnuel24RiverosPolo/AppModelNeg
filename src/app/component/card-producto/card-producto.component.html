@@ -1,8 +1,23 @@
-<img src="{{product.imgURL}}" class="card-img-top" alt="...">
-<div class="card-body">
-    <h5 class="card-title">{{product.nombre}}</h5>
-    <p class="card-text">{{product.descripcion}}</p>
-    <p class="card-text">S/.{{product.precio}}</p>
-    <a routerLink="/product/{{product._id}}" class="btn btn-primary">Ver</a>
-    <!-- <a class="btn" (click)="agregarProduct(product._id)"><i class="fa-solid fa-cart-plus"></i></a> -->
+
+  <div class="content">
+    <div class="ribbon-container ">
+        <div class="ribbon" *ngIf="product.descuentos">{{product.descuentos}}</div>
+        <div class="image-container" (mouseenter)="showDetail()"(mouseleave)="hideDetails()">
+            <div class="image-item">
+              <ng-container *ngIf="hoveredProduct === null; else image2">
+                <img class="producto-imagen" src="{{product.image[0]}}" alt="${product.name}">
+              </ng-container>
+              <ng-template #image2>
+                <img class="producto-imagen" src="{{product.image[1]}}" alt="${product.name}">
+              </ng-template>  
+            </div>
+        </div>
+        <div class="producto-detalles">
+            <h3 class="producto-titulo">{{product.name}}</h3>
+            <p class="producto-precio">{{product.price | currency: "PEN"}}</p>
+              <a (click)="contactar(product.name)" class="button"><i class="fa-brands fa-whatsapp whatsapp"></i>    Contactar</a>
+            
+        </div>
+    </div>
+
 </div>
