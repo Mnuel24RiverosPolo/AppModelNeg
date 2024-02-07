@@ -13,6 +13,7 @@ import { SafePipe } from './pipes/safe.pipe';
 import { FiltroLimitPipe } from './pipes/filtro-limit.pipe';
 import { ProductosComponent } from './component/productos/productos.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +26,15 @@ import { ProductosComponent } from './component/productos/productos.component';
     SafePipe,
     FiltroLimitPipe,
     ProductosComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

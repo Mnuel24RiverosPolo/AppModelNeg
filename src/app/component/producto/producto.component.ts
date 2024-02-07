@@ -8,12 +8,19 @@ import { ProductosService } from 'src/app/services/productos.service';
   styleUrls: ['./producto.component.css']
 })
 export class ProductoComponent {
+
+  
+    
+
+  
   product: any;
   _id: number = 0
   constructor(
+
     private route: ActivatedRoute,
     private productService: ProductosService
-  ){}
+  ){
+  }
   ngOnInit(): void {
     this.route.params.subscribe(params=>{
       this._id = params['_id'];
