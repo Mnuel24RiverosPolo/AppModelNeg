@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'appFrontEcommerce';
+
+  datosmenu=[{
+    'titulo': 'google',
+    'icon': '',
+    'url':''
+    
+  }]
+
+
 }
