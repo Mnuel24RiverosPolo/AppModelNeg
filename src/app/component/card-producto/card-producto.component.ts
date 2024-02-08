@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Route } from '@angular/router';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-producto',
@@ -10,7 +10,8 @@ export class CardProductoComponent {
   @Input() product: any = {}
   @Output() showDetails = new EventEmitter<number>();
 
-  constructor(){}
+  constructor(
+    private router: Router  ){}
 
   hoveredProduct: any | null = null;
 
@@ -27,5 +28,9 @@ export class CardProductoComponent {
 
   hideDetails() {
     this.hoveredProduct = null;
+  }
+  rutaProduct(id: number) {
+      this.router.navigate(['tienda/producto/'+id])
+      console.log(id)
   }
 }
