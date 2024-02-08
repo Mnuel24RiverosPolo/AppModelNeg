@@ -13,6 +13,7 @@ export class HomeComponent {
   categorias: any = [];
   categoriaSeleccionada: string = '';
   filtroActivo: boolean = false
+  
   constructor(
     private productsService: ProductosService,
     private categoriasService: CategoriasService
@@ -28,6 +29,8 @@ export class HomeComponent {
   filtrarPeliculas(categoria: string) {
     this.categoriaSeleccionada = categoria;
     this.filtroActivo = true
-    console.log(this.categoriaSeleccionada)
+    console.log(this.categoriaSeleccionada);
+
   }
+  
 }
