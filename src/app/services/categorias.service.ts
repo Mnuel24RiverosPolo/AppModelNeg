@@ -13,8 +13,6 @@ export class CategoriasService {
     { id: '6', name: 'Sandalias' },
     { id: '7', name: 'Faldas' },
     { id: '8', name: 'Zapatos' },
-    { id: '9', name: 'Zapatos' },
-    { id: '10', name: 'Zapatos' },
   ]
   constructor() { }
 

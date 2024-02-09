@@ -8,7 +8,7 @@ export class ItemsService {
      logo: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Logotipo_Tottus.svg",
      items: [
       {name: "Inicio", ruta: "/home"},
-      {name: "Productos", ruta: "/productos"},
+      {name: "Productos", ruta: "/tienda/productos"},
       {name: "Contactar", ruta: "/contactar"},
 
      ] ,

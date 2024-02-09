@@ -1,1 +1,36 @@
-<p>productos works!</p>
+<div class="container p-5">
+    <div class="d-flex">
+        <input class="form-control mb-3" type="text" placeholder="Buscar producto" #txtSearch
+            (keyup)="onSearchProduct(txtSearch.value)">
+        <!-- <a class="btn" *ngIf="this.authService.getToken()" routerLink="/new"><i class="fa-sharp fa-solid fa-plus"></i></a> -->
+    </div>
+    <div class="btn-filtros">
+        <button *ngFor="let categoria of categorias" class="btn btn-danger mx-2"
+            (click)="filtrarPeliculas(categoria.id)">{{categoria.name}}</button>
+    </div>
+    <ng-container *ngIf="filtroActivo; else allProductos">
+        <div class="row">
+            <div *ngFor="let product of productsFilters  | filtroProducto:search" class=" col-md-4 mx-auto mt-2 mb-2"
+            style="width: 18rem;">
+                <ng-container *ngIf="product.categoria.includes(categoriaSeleccionada) || categoriaSeleccionada === ''">
+                    <app-card-producto [product]="product"></app-card-producto>
+                </ng-container>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-template #allProductos>
+        <div class="row">
+            <div *ngFor="let product of products | filtroLimit:page:search" class=" col-md-4 mx-auto mt-2 mb-2"
+                style="width: 18rem;">
+    
+                <app-card-producto [product]="product"></app-card-producto>
+            </div>
+            <div class="botones w-100 d-flex justify-content-around">
+                <button class="btn btn-primary" (click)="prevPage()"><-</button>
+                <button class="btn btn-primary" (click)="nextPage()"
+                    [disabled]="(products | filtroLimit:page:search).length == 0">-></button>
+            </div>
+        </div>
+    </ng-template>
+</div>
