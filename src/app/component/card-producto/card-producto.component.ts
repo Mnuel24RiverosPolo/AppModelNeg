@@ -30,7 +30,7 @@ export class CardProductoComponent {
     this.hoveredProduct = null;
   }
   rutaProduct(id: number) {
-      this.router.navigate(['tienda/producto/'+id])
+      this.router.navigate(['/tienda/producto/'+id])
       console.log(id)
   }
 }
