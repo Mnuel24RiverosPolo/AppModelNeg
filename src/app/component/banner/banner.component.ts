@@ -12,7 +12,7 @@ export class BannerComponent {
 
   ];
   currentImg: string = '';
-  bannerText: string = "Bienvenidos a Panduro";
+  bannerText: string = "Bienvenidos a Pandoro";
   ngOnInit(): void {
     this.startImageSlider();
   }
