@@ -11,15 +11,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '/home',
+    path: 'home',
     component: HomeComponent
   },
   {
-    path: '/tienda/producto/:id',
+    path: 'tienda/producto/:id',
     component: ProductoComponent
   },
   {
-    path: '/tienda/productos',
+    path: 'tienda/productos',
     component: ProductosComponent
   }
 ];
