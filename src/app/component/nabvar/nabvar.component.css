@@ -10,7 +10,7 @@
   left: 0;
   width: 100%;
   padding: 20px 100px;
-  background: rgba(0, 0, 0);
+  background: #00322f;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +44,11 @@
   cursor: default;
 }
 .img-logo{
-  width: 200px;
+  max-width:  50px;
+}
+
+.text-panduro{
+  height: 65px;
 }
 .navbar a {
   color: #0077ff;
@@ -105,7 +109,7 @@
 }
 .header.scrolled {
   position: fixed;
-  background: rgba(235, 233, 135, 0.9); /* Cambia el fondo cuando se desplaza */
+  background:  #00322f; /* Cambia el fondo cuando se desplaza */
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   
 }

@@ -1,6 +1,7 @@
 <!-- nombre-del-componente.component.html -->
 <header class="header" [ngClass]="{'scrolled': isScrolled}">
-  <a href="/home" class="logo"><img class="img-logo" src="{{logo}}" alt=""></a>
+  <!-- <a href="/home" class="logo"><img class="img-logo" src="{{logo}}" alt=""></a> -->
+  <a href="/home" class="logo"><img class="img-logo" src="{{logo}}" alt=""> <img  class="text-panduro" src="../../assets/panduro.png" alt=""></a>
   <i class='bx bx-menu' id="menu-icon" (click)="toggleMenu()"></i>
   <nav class="navbar" [ngClass]="{'active': isMenuActive}" >
     <ng-container *ngFor="let item of items">

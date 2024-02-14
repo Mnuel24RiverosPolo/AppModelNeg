@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ItemsService {
   nav = {
-     logo: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Logotipo_Tottus.svg",
+     logo: '../../assets/logo.png',
      items: [
       {name: "Inicio", ruta: "/home"},
       {name: "Productos", ruta: "/tienda/productos"},
