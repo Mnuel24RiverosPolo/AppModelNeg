@@ -51,7 +51,7 @@
   height: 65px;
 }
 .navbar a {
-  color: #0077ff;
+  color: #ffffff;
   font-size: 18px;
   text-decoration: none;
   margin-left: 35px;
@@ -111,10 +111,9 @@
   position: fixed;
   background:  #00322f; /* Cambia el fondo cuando se desplaza */
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  
 }
 
 .nav-bg.scrolled {
-  background: rgba(255, 255, 255, 0.9); /* Cambia el fondo cuando se desplaza */
+  background: rgba(255, 255, 255, 0.5); /* Cambia el fondo cuando se desplaza */
   position: fixed;
 }

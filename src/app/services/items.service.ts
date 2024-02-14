@@ -9,7 +9,7 @@ export class ItemsService {
      items: [
       {name: "Inicio", ruta: "/home"},
       {name: "Productos", ruta: "/tienda/productos"},
-      {name: "Contactar", ruta: "/contactar"},
+      // {name: "Contactar", ruta: "/contactar"},
 
      ] ,
   }

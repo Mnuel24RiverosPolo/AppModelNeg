@@ -15,7 +15,7 @@
         <div class="producto-detalles">
             <h3 class="producto-titulo" (click)="rutaProduct(product.id)">{{product.name}}</h3>
             <p class="producto-precio">{{product.price | currency: "PEN"}}</p>
-              <a (click)="contactar(product.name)" class="button"><i class="fa-brands fa-whatsapp whatsapp"></i>    Contactar</a>
+              <a href="https://api.whatsapp.com/send?phone=51961614174&text=Hola+quiero+comprar%3A%0D%0A%0D%0A*{{product.name}}*%0D%0A*Precio:*%20S/{{product.price}}%0D%0A%0D%0A%C2%A1Gracias%21" class="button"><i class="fa-brands fa-whatsapp whatsapp"></i>    Contactar</a>
             
         </div>
     </div>

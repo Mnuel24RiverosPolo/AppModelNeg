@@ -21,7 +21,8 @@ export class CategoriasService {
   }
 
   getCategoriaId(id: string){
-    return this.categorias.find(p => p.id === id)
+    const categoria = this.categorias.find(c => c.id === id);
+    return categoria ? categoria.name : undefined;
     // return this.http.get<any>(this.URL + '/' + id);
 
   }
